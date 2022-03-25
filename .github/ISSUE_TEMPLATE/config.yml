@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: ⁉ Umbraco Heartcore Support Question
+    url: https://www.umbraco.io
+    about: For support questions please log into your umbraco.io account and use the chat in the bottom right corner to talk to our support team.
+  - name: 🔒 Security Issue
+    url: https://umbraco.com/about-us/trust-center/security-and-umbraco/how-to-report-a-vulnerability-in-umbraco/
+    about: Please visit our security center to report any possible security issues
