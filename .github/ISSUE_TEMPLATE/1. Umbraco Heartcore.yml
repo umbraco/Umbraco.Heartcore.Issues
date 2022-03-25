@@ -1,7 +1,6 @@
 ---
 name: 🔆 Umbraco Heartcore Issue
 description: "Create issues/feature requests for our headless offering, Umbraco Heartcore"
-labels: "category/heartcore"
 body:
 - type: textarea
   id: "description"
