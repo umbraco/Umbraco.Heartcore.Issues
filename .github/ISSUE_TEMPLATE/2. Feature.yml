@@ -1,0 +1,35 @@
+---
+name: ✨ Feature
+description: "Create a feature if you have an idea for something new in Heartcore."
+labels: "type/feature"
+body:
+- type: markdown
+  attributes:
+    value: >
+      If your feature would also help make the core Umbraco CMS a better product, then please
+      consider posting your feature request over on
+      [that issue tracker](https://github.com/umbraco/Umbraco-CMS/issues) instead.
+      <br/>
+      <br/>
+      Heartcore also benefits from any features added to the core CMS!
+- type: textarea
+  id: "summary"
+  attributes:
+    label: "Summary"
+    description: "Write a short summary of the feature you would like to see added."
+    placeholder: >
+      Feel free to include images or mockups if it would help us understand your request!
+  validations:
+    required: true
+- type: textarea
+  id: "usecase"
+  attributes:
+    label: "Use case"
+    description: "Tell us a bit about why you would like this feature."
+    placeholder: >
+      Try and describe what it would allow your business or content authors to achieve, rather
+      than talking technical!
+- type: markdown
+  attributes:
+    value: >
+      Thanks for taking the time to help improve Heartcore!

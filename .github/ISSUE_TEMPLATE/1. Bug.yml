@@ -1,0 +1,37 @@
+---
+name: 🐞 Bug
+description: "Raise a bug if you've found a problem or unintended behaviour in Heartcore."
+labels: "type/bug"
+body:
+- type: textarea
+  id: "summary"
+  attributes:
+    label: "Summary"
+    description: "Write a short summary of the issue you want to report."
+    placeholder: >
+      Try to keep to a description of the problem and not just what you think the solution might be!
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: "Steps to reproduce"
+    id: "reproduction"
+    description: "How can we reproduce the problem on a fresh Heartcore project?"
+    placeholder: >
+      Please include screenshots, gifs or mp4 videos if applicable.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: "Expected result"
+    id: "expected"
+    description: "What did you expect to see when you carried out the reproduction steps?"
+- type: textarea
+  attributes:
+    label: "Actual result"
+    id: "actual"
+    description: "What *actually* happened when you carried out the reproduction steps?"
+- type: markdown
+  attributes:
+    value: |
+      Thanks for taking the time to help improve Heartcore!
