@@ -1,22 +1,22 @@
 ---
-name: ✨ Feature
-description: "Tell us about your idea for something new in Heartcore."
-labels: "type/feature"
+name: 💡 Improvement
+description: "Let us know if any of our current features could be better."
+labels: "type/improvement"
 body:
 - type: markdown
   attributes:
     value: >
-      If your feature idea would also help make the core Umbraco CMS a better product, then please
-      consider posting your feature request over on
+      If your idea for improvement would also help make the core Umbraco CMS a better product, then
+      please consider posting your feature request over on
       [that issue tracker](https://github.com/umbraco/Umbraco-CMS/issues) instead.
       <br/>
       <br/>
-      Heartcore also benefits from any features added to the core CMS!
+      Heartcore also benefits from any improvements to the core CMS!
 - type: textarea
   id: "summary"
   attributes:
     label: "Summary"
-    description: "Write a short summary of the feature you would like to see added."
+    description: "Write a short summary of the improvement you would like to see."
     placeholder: >
       Feel free to include images or mockups if it would help us understand your request!
   validations:
@@ -25,7 +25,7 @@ body:
   id: "usecase"
   attributes:
     label: "Use case"
-    description: "Tell us a bit about why you would like this feature."
+    description: "Tell us a bit about why you would like this change."
     placeholder: >
       Try and describe what it would allow your business or content authors to achieve, rather
       than talking technical!
