@@ -1,0 +1,51 @@
+name: issue-first-response
+
+on:
+  issues:
+    types: [opened]
+
+jobs: 
+  send-response:
+    if: github.event.issue.labels[0] != null && github.event.issue.labels[1] == null
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write    
+    steps:
+      - name: Bug comment
+        if: github.event.issue.labels[0].name == 'type/bug'
+        run: gh issue comment "$NUMBER" --repo "$REPO" --body "$BODY"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUMBER: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+          BODY: |
+            Hi there @${{ github.actor }}!
+
+            Firstly, a big thank you for raising this issue. Every piece of feedback we receive helps us to make Heartcore better.
+
+            We really appreciate your patience while we wait for our team to have a look at this but we wanted to let you know that we see this and share with you the plan for what comes next.
+              * We'll replicate the issue to ensure that the problem is as described.
+              * We'll decide whether the behavior is an issue or if the behavior is intended.
+              * If we need any further information, we'll reach out with any questions.
+
+            We wish we could work with everyone directly and assess your issue immediately but we're in the fortunate position of having lots of feedback to work with and only a few humans who are able to do anything with it. We are making progress though, and we'll keep you posted when we have something to report!
+
+            Thanks, from your friendly Umbraco GitHub bot 🤖 🙂
+      - name: Feature comment
+        if: github.event.issue.labels[0].name == 'type/feature' || github.event.issue.labels[0].name == 'type/improvement'
+        run: gh issue comment "$NUMBER" --repo "$REPO" --body "$BODY"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUMBER: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+          BODY: |
+            Hi there @${{ github.actor }}!
+
+            Firstly, a big thank you for your suggestion. Every piece of feedback we receive helps us to make Heartcore better.
+
+            We really appreciate your patience while we wait for our team to have a look at this. We'll assess whether your suggestion is something we can action and let you know roughly what you can expect next.
+
+            We wish we could work with everyone directly and assess your suggestion immediately but we're in the fortunate position of having lots of feedback to work with and only a few humans who are able to do anything with it. We are making progress though, and we'll keep you posted when we have something to report!
+
+            Thanks, from your friendly Umbraco GitHub bot 🤖 🙂
